@@ -47,3 +47,41 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+@keyframes enter-diamond {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate(-12deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.animate-enter-diamond {
+  animation: enter-diamond 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes enter-photo {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-enter-photo {
+  animation: enter-photo 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-enter-diamond,
+  .animate-enter-photo {
+    animation: none;
+    opacity: 1;
+  }
+}

@@ -4,7 +4,20 @@ import { MessageCircle } from "lucide-react";
 export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-diamond-pattern text-white">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:items-end md:py-24">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 mx-auto w-[380px] max-w-[80vw] sm:w-[440px] md:inset-x-auto md:right-[6%] md:left-auto md:top-1/2 md:bottom-auto md:mx-0 md:w-[820px] md:max-w-none md:-translate-y-1/2 lg:w-[920px]"
+      >
+        <Image
+          src="/icone-diamante.png"
+          alt=""
+          width={3428}
+          height={3361}
+          priority
+          className="animate-enter-diamond h-auto w-full"
+        />
+      </div>
+      <div className="relative z-10 mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:items-end md:py-24">
         <div>
           <Image
             src="/logo-simples.png"
@@ -52,7 +65,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative -mb-16 h-[420px] w-full overflow-hidden sm:h-[520px] md:-mb-24 md:h-[600px] lg:h-[680px]">
+        <div className="animate-enter-photo relative -mb-16 h-[420px] w-full overflow-hidden sm:h-[520px] md:-mb-24 md:h-[600px] lg:h-[680px]">
           <Image
             src="/foto-filipe.png"
             alt="Filipe Gil"
